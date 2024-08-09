@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #b3a6c9;
+        }
+        h1, h2, h3 {
+            color: #000000;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: #d3c9ef;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #e6e6fa;
+            padding-bottom: 5px;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card .example {
+            background-color: #e6e6fa;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .card .example::before {
+            content: "Example: ";
+            font-weight: bold;
+            color: #3498db;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        h3::before { content: "★ "; color: #2c3e50; }
+
+    </style>
+</head>
+<body>
+    <h1>A Comprehensive Guide to Learning Methods in AI</h1>
+
+    <!-- Card 1: Supervision Based -->
+    <div class="card">
+        <h2>Supervision Based</h2>
+        <h3>Supervised Learning</h3>
+        <ol>
+            <li>
+                <h4>Traditional/strong supervised learning</h4>
+                <p>A type of machine learning where the model learns from labelled data, mapping input features to known output labels.</p>
+                <div class="example">Image classification, where a model is trained on a dataset of labelled images (e.g., "cat," "dog," "bird") and learns to classify new, unseen images.</div>
+                <img src="Images\1.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">            
+            </li>
+            <li>
+                <h4>Transfer learning</h4>
+                <p>A technique where a model developed for one task is reused as the starting point for a model on a second, related task.</p>
+                <div class="example">Using a pre-trained image recognition model (e.g., trained on ImageNet) and fine-tuning it for a specific task like identifying different breeds of dogs.</div>
+                <img src="Images\2.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+            </li>
+            <li>
+                <h4>Weakly supervised learning</h4>
+                <p>Learning approaches that can train models with limited, imperfect, or inaccurate supervision.</p>
+                <ul>
+                    <li>
+                        <strong>Active Learning:</strong> An approach where the model actively selects the most informative data points for labelling by human experts.
+                        <div class="example">In text classification, the model might select sentences it's most uncertain about for human labelling, improving its performance efficiently.</div>
+                        <img src="Images\3.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">                 
+                    </li>
+                    <li>
+                        <strong>Self-supervised learning:</strong> The model selects the elements with the highest confidence score and uses them to label the similar ones.
+                        <div class="example">In natural language processing, predicting the next word in a sentence based on the previous words, allowing the model to learn language patterns without explicit labelling.</div>
+                        <img src="Images\4.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+                    </li>
+                    <li>
+                        <strong>Multiple instance learning:</strong> A form of weakly supervised learning where labels are provided for sets or bags of instances, rather than individual instances.
+                        <div class="example">In drug discovery, where a bag of molecular conformations is labelled as active or inactive, but the specific conformation responsible for the activity is unknown.</div>
+                        <img src="Images\5.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h3>Unsupervised Learning</h3>
+        <p>A type of machine learning where the model learns patterns from unlabelled data.</p>
+        <div class="example">Clustering customer data to identify distinct market segments without predefined categories.</div>
+        <img src="Images\6.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+        <h3>Reinforcement Learning</h3>
+        <p>A learning paradigm where an agent learns to make decisions by taking actions in an environment to maximize a cumulative reward.</p>
+        <div class="example">Training a game-playing AI to master chess or go by playing many games and learning from the outcomes.</div>
+        <img src="Images\7.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+    </div>
+
+    <!-- Card 2: Moment of Learning -->
+    <div class="card">
+        <h2>Moment of Learning</h2>
+        <h3>Offline Learning</h3>
+        <p>The model is trained from a fixed dataset that has been collected and labeled before deployment.</p>
+        <div class="example">Training a spam detection model on a large corpus of labelled emails before deploying it in an email service.</div>
+        <h3>Online Learning</h3>
+        <ol>
+            <li>
+                <h4>Continual / Incremental Learning</h4>
+                <p>The model continues to learn and adapt from a stream of data after initial training.</p>
+                <div class="example">A recommendation system that updates its model as users interact with content, continuously improving its suggestions.</div>
+                <img src="Images\8.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+            </li>
+            <li>
+                <h4>Federated / Collaborative Learning</h4>
+                <p>The model is trained across multiple decentralized edge devices or servers holding data locally without exchanging them.</p>
+                <div class="example">Multiple hospitals training a shared diagnostic model on their local patient data without exchanging the sensitive information.</div>
+                <img src="Images\9.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+            </li>
+        </ol>
+    </div>
+
+    <!-- Card 3: Task Based -->
+    <div class="card">
+        <h2>Task Based</h2>
+        <h3>Single-Task Learning</h3>
+        <p>The model is trained to perform a single specific task.</p>
+        <div class="example">A sentiment analysis model trained solely to classify text as positive, negative, or neutral.</div>
+        <h3>Multi-Task Learning</h3>
+        <p>The model is trained to perform multiple related tasks simultaneously.</p>
+        <div class="example">A natural language processing model that can perform part-of-speech tagging, named entity recognition, and sentiment analysis on the same input text.</div>
+        <h3>Contrastive Learning</h3>
+        <p>A technique where the model learns to distinguish between similar and dissimilar data points in a representation space.</p>
+        <div class="example">Training a face recognition system by learning to maximize the similarity between different images of the same person while minimizing similarity with images of different people.</div>
+        <h3>N-shot Learning</h3>
+        <ol>
+            <li>
+                <h4>Zero-shot Learning</h4>
+                <p>The ability of a model to recognize or classify instances of classes that were not seen during training.</p>
+                <div class="example">A language model answering questions about a topic it wasn't explicitly trained on, using its general knowledge and reasoning abilities.</div>
+            </li>
+            <li>
+                <h4>One-shot Learning</h4>
+                <p>The ability to learn a task from just one example.</p>
+                <div class="example">A facial recognition system that can identify a person after seeing only one photo of them.</div>
+            </li>
+            <li>
+                <h4>Few-shot Learning</h4>
+                <p>The ability to learn a task from a small number of examples.</p>
+                <div class="example">A machine translation model that can adapt to a new language pair after seeing only a few dozen translated sentences.</div>
+            </li>
+        </ol>
+        <h3>Adversarial Learning</h3>
+        <p>A technique involving the training of two competing models: one that generates adversarial examples, and another that learns to resist or detect these attacks.</p>
+        <div class="example">Training an image classification model to correctly classify images even when they've been subtly altered to fool the model.</div>
+        <img src="Images\10.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+        <h3>Meta Learning</h3>
+        <p>An approach where the model learns how to learn, improving its ability to acquire new skills or adapt to new tasks quickly.</p>
+        <div class="example">A model that learns general strategies for image classification tasks, allowing it to quickly adapt to classifying new types of objects with minimal additional training.</div>
+        <img src="Images\11.png" alt="Example Image" style="width:100%; height:auto; margin-top:10px; border-radius:4px;">
+    </div>
+</body>
+</html>
